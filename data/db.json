@@ -1,0 +1,69 @@
+{
+  "categories": [
+    { "id": "CAT-001", "name": "Electronics", "description": "Microcontrollers, displays, computers, cables, sensors, and office electronic devices" },
+    { "id": "CAT-002", "name": "Mechanical", "description": "Metal gears, motor components, bolts, nuts, pneumatic parts, and structural assemblies" },
+    { "id": "CAT-003", "name": "Medical", "description": "Clinical grade tools, gloves, masks, diagnostic kits, and sanitation gear" },
+    { "id": "CAT-004", "name": "Chemicals", "description": "Solvents, alcohols, cleaning chemical compounds, and hazardous solutions" },
+    { "id": "CAT-005", "name": "Stationery", "description": "Office paper rolls, pencils, packaging tapes, files, binders, and markers" }
+  ],
+  "items": [
+    { "id": "ITEM-001", "name": "LED Monitor", "category": "Electronics", "description": "24-inch IPS Full HD Computer Monitor", "unit": "pcs", "quantity": 90, "minThreshold": 15, "createdDate": "2026-05-10" },
+    { "id": "ITEM-002", "name": "Mechanical Keyboard", "category": "Electronics", "description": "TKL Wired mechanical keyboard, blue switches", "unit": "pcs", "quantity": 85, "minThreshold": 20, "createdDate": "2026-05-12" },
+    { "id": "ITEM-003", "name": "USB Hub", "category": "Electronics", "description": "4-Port USB 3.0 External Hub", "unit": "pcs", "quantity": 4, "minThreshold": 10, "createdDate": "2026-05-15" },
+    { "id": "ITEM-004", "name": "Steel Bolt M8", "category": "Mechanical", "description": "Zinc plated carbon steel hexagon head bolt M8 x 50mm", "unit": "pcs", "quantity": 150, "minThreshold": 50, "createdDate": "2026-05-01" },
+    { "id": "ITEM-005", "name": "Gearbox A12", "category": "Mechanical", "description": "12V Micro metal gear motor reduction unit", "unit": "pcs", "quantity": 2, "minThreshold": 5, "createdDate": "2026-05-20" },
+    { "id": "ITEM-006", "name": "Latex Gloves (Box)", "category": "Medical", "description": "Powder-free medical grade examination gloves, medium", "unit": "boxes", "quantity": 300, "minThreshold": 50, "createdDate": "2026-05-02" },
+    { "id": "ITEM-007", "name": "Infrared Thermometer", "category": "Medical", "description": "Non-contact forehead digital laser thermometer", "unit": "pcs", "quantity": 120, "minThreshold": 15, "createdDate": "2026-05-05" },
+    { "id": "ITEM-008", "name": "Isopropyl Alcohol 99%", "category": "Chemicals", "description": "Technical grade pure isopropyl alcohol cleaning solvent", "unit": "litres", "quantity": 50, "minThreshold": 20, "createdDate": "2026-05-18" },
+    { "id": "ITEM-009", "name": "Ethanol Sanitizer", "category": "Chemicals", "description": "75% Denatured ethyl alcohol liquid sanitizer", "unit": "litres", "quantity": 8, "minThreshold": 15, "createdDate": "2026-05-22" },
+    { "id": "ITEM-010", "name": "A4 Paper Reams", "category": "Stationery", "description": "80gsm high brightness white copy paper, 500 sheets", "unit": "reams", "quantity": 90, "minThreshold": 15, "createdDate": "2026-05-01" },
+    { "id": "ITEM-011", "name": "Ballpoint Pens (Pack)", "category": "Stationery", "description": "Retractable blue ink pens, 50 pieces per pack", "unit": "packs", "quantity": 15, "minThreshold": 10, "createdDate": "2026-05-05" }
+  ],
+  "layout": {
+    "warehouseName": "Central Hub",
+    "rows": 3,
+    "columns": 3
+  },
+  "locations": [
+    { "id": "A1", "capacity": 100, "currentUsage": 80, "status": "Active", "allocatedItems": [
+      { "itemId": "ITEM-001", "itemName": "LED Monitor", "quantity": 50 },
+      { "itemId": "ITEM-002", "itemName": "Mechanical Keyboard", "quantity": 30 }
+    ] },
+    { "id": "A2", "capacity": 150, "currentUsage": 120, "status": "Active", "allocatedItems": [
+      { "itemId": "ITEM-006", "itemName": "Latex Gloves (Box)", "quantity": 120 }
+    ] },
+    { "id": "A3", "capacity": 100, "currentUsage": 95, "status": "Active", "allocatedItems": [
+      { "itemId": "ITEM-008", "itemName": "Isopropyl Alcohol 99%", "quantity": 50 },
+      { "itemId": "ITEM-001", "itemName": "LED Monitor", "quantity": 40 },
+      { "itemId": "ITEM-003", "itemName": "USB Hub", "quantity": 5 }
+    ] },
+    { "id": "B1", "capacity": 120, "currentUsage": 0, "status": "Active", "allocatedItems": [] },
+    { "id": "B2", "capacity": 80, "currentUsage": 55, "status": "Active", "allocatedItems": [
+      { "itemId": "ITEM-002", "itemName": "Mechanical Keyboard", "quantity": 55 }
+    ] },
+    { "id": "B3", "capacity": 100, "currentUsage": 8, "status": "Active", "allocatedItems": [
+      { "itemId": "ITEM-009", "itemName": "Ethanol Sanitizer", "quantity": 8 }
+    ] },
+    { "id": "C1", "capacity": 100, "currentUsage": 15, "status": "Active", "allocatedItems": [
+      { "itemId": "ITEM-011", "itemName": "Ballpoint Pens (Pack)", "quantity": 15 }
+    ] },
+    { "id": "C2", "capacity": 200, "currentUsage": 180, "status": "Active", "allocatedItems": [
+      { "itemId": "ITEM-006", "itemName": "Latex Gloves (Box)", "quantity": 180 }
+    ] },
+    { "id": "C3", "capacity": 100, "currentUsage": 0, "status": "Disabled", "allocatedItems": [] }
+  ],
+  "dailyTakes": [
+    { "id": "TAKE-001", "itemId": "ITEM-001", "itemName": "LED Monitor", "quantityTaken": 5, "remainingQuantity": 90, "date": "2026-06-01", "remarks": "Office setup in block 3" },
+    { "id": "TAKE-002", "itemId": "ITEM-006", "itemName": "Latex Gloves (Box)", "quantityTaken": 30, "remainingQuantity": 300, "date": "2026-06-01", "remarks": "Daily clinic replenishment" },
+    { "id": "TAKE-003", "itemId": "ITEM-004", "itemName": "Steel Bolt M8", "quantityTaken": 12, "remainingQuantity": 150, "date": "2026-06-02", "remarks": "Assembly line B maintenance" },
+    { "id": "TAKE-004", "itemId": "ITEM-003", "itemName": "USB Hub", "quantityTaken": 6, "remainingQuantity": 4, "date": "2026-06-02", "remarks": "IT desk provisioning" }
+  ],
+  "damagedItems": [
+    { "id": "DMG-001", "itemId": "ITEM-001", "itemName": "LED Monitor", "quantity": 2, "reason": "Forklift bumper collision", "date": "2026-05-30" },
+    { "id": "DMG-002", "itemId": "ITEM-008", "itemName": "Isopropyl Alcohol 99%", "quantity": 5, "reason": "Damaged valve causing leakage", "date": "2026-06-01" }
+  ],
+  "movements": [
+    { "id": "MOV-001", "itemId": "ITEM-001", "itemName": "LED Monitor", "fromLocation": "A1", "toLocation": "A3", "quantity": 5, "date": "2026-06-01" },
+    { "id": "MOV-002", "itemId": "ITEM-002", "itemName": "Mechanical Keyboard", "fromLocation": "A1", "toLocation": "B2", "quantity": 10, "date": "2026-06-02" }
+  ]
+}
